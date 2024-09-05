@@ -13,7 +13,7 @@
         />
 
         <q-toolbar-title class="text-black">
-          Panier des Sens
+          Panier des Prouduits frais
         </q-toolbar-title>
 
         <q-btn
