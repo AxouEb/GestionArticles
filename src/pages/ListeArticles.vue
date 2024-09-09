@@ -74,6 +74,44 @@
   </div>
 
 
+  <div class="row no-wrap items-start" >
+    <div v-for="article in articles" :key="article.id" class="flex items-start">
+      <q-card
+        flat
+        bordered
+        class="q-col-gutter-xs-x-xs"
+        style="width: 300px; flex-shrink: 0; margin-right: 16px;"
+      >
+        <div class="col-4 q-pa-xs bg-grey-3"  >
+          <q-img
+            :src="image"
+
+            style="height: 150px; object-fit: cover;"
+          ></q-img>
+        </div>
+
+
+        <div class="q-mb-lg"   >
+
+          <q-card-section >
+            <div class="text-subtitle1" >{{ article.title }}</div>
+            <div class="text-caption text-grey">{{ article.body }}</div>
+
+            <q-card-actions align="between"  style="height: 10px; ">
+
+              <q-btn label="Détail" color="primary" @click="goDetails(article)"></q-btn>
+            </q-card-actions>
+
+          </q-card-section>
+
+        </div>
+      </q-card>
+
+
+    </div>
+  </div>
+
+
 
 
 

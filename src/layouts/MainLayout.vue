@@ -51,7 +51,7 @@
         <q-item-label
           header
         >
-          Essential Links
+
         </q-item-label>
 
         <EssentialLink
@@ -79,12 +79,13 @@ defineOptions({
 
 const linksList = [
   {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev'
+    title: 'Utilisateurs',
+    link: 'http://localhost:9000/#/users',
+    icon: 'group_add',
+
   },
-  {
+
+  /*{
     title: 'Github',
     caption: 'github.com/quasarframework',
     icon: 'code',
@@ -119,7 +120,7 @@ const linksList = [
     caption: 'Community Quasar projects',
     icon: 'favorite',
     link: 'https://awesome.quasar.dev'
-  }
+  }*/
 ]
 
 const leftDrawerOpen = ref(false)
