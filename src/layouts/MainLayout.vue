@@ -13,29 +13,12 @@
         />
 
         <q-toolbar-title class="text-black">
-          Panier des Prouduits frais
+         Blog
         </q-toolbar-title>
 
-        <q-btn
-          color="black"
-          flat
-          dense
-          round
-          icon="search"
-          aria-label="Menu"
-          @click="toggleLeftDrawer"
-        />
 
 
-        <q-btn
-          color="black"
-          flat
-          dense
-          round
-          icon="event"
-          aria-label="Menu"
-          @click="toggleLeftDrawer"
-        />
+
 
 
 

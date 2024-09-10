@@ -4,7 +4,9 @@ const routes = [
     component: () => import('layouts/MainLayout.vue'),
     children: [
      // { path: '', component: () => import('pages/IndexPage.vue') },
-      { path: 'image', component: () => import('pages/ImagePages.vue') },
+      { path: 'modifier', component: () => import('pages/ModifierPages.vue') },
+      { path: 'enregister', component: () => import('pages/EnregistrerPages.vue') },
+
       { path: '', component: () => import('pages/ListeArticles.vue') },
       { path: 'users', component: () => import('pages/ListeUsers.vue') },
       { path: 'article-commentaire/:articleId',name:'article-commentaire', component: () => import('pages/ListeArticleCommentaires.vue') },
