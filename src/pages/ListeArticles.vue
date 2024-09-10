@@ -43,9 +43,12 @@
 
             <q-card-actions align="between"  style="height: 10px; ">
 
-              <q-btn label="Modifier" color="primary" @click="editArticle(article) "></q-btn>
+
               <q-btn label="Détail" color="primary" @click="goDetails(article)"></q-btn>
-              <q-btn label="Supprimer" color="negative" @click="deleteArticle(article.id)"></q-btn>
+              <div class="" >
+              <q-btn  icon="edit" color="primary" class="q-pl-lg" @click="editArticle(article) "></q-btn>
+              <q-btn  style="margin-left: 10px;" icon="delete"  color="negative" @click="deleteArticle(article.id)"></q-btn>
+        </div>
             </q-card-actions>
 
           </q-card-section>
@@ -117,7 +120,7 @@ export default {
         console.log(response, 'response of post')
 
         const newArticle = response.data; // Assuming response contains the created article
-        this.articles.push(newArticle); // Add new article to the list
+        this.articles.unshift(newArticle);
         this.dialog = false; // Close the dialog
         this.message = 'Article créé avec succès!'; // Set success message
         this.nomArticle = ''; // Clear form fields
