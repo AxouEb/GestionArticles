@@ -120,6 +120,7 @@ export default {
         console.log(response, 'response of post')
 
         const newArticle = response.data; // Assuming response contains the created article
+        console.log(newArticle, 'newArticle')
         this.articles.unshift(newArticle);
         this.dialog = false; // Close the dialog
         this.message = 'Article créé avec succès!'; // Set success message
@@ -162,7 +163,7 @@ export default {
       // Modifier le comportement du formulaire pour la mise à jour
       this.onSubmit = async () => {
         try {
-          const response = await api.put(`/posts/${this.articleId}`, {
+          const response = await api.patch(`/posts/${this.articleId}`, {
             title: this.nomArticle,
             body: this.descriptionArticle,
             // Add other properties to update if needed
